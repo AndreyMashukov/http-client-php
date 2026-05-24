@@ -3,7 +3,8 @@
     "description": "PSR-18 HTTP client backed by ext-curl, with a middleware pipeline (retry on selected status codes, header injection). PSR-7 / PSR-17 message + factory interfaces; bring your own PSR-7 implementation (nyholm/psr7, guzzlehttp/psr7, slim/psr7, etc.).",
     "type": "library",
     "license": "MIT",
-    "keywords": ["psr-18", "psr-7", "psr-17", "http-client", "curl", "middleware"],
+    "homepage": "https://github.com/AndreyMashukov/http-client-php",
+    "keywords": ["psr-18", "psr-7", "psr-17", "http-client", "curl", "middleware", "retry", "http", "client", "rest", "api"],
     "authors": [
         {
             "name": "Andrei Mashukov",
@@ -11,6 +12,10 @@
             "homepage": "https://github.com/AndreyMashukov"
         }
     ],
+    "support": {
+        "issues": "https://github.com/AndreyMashukov/http-client-php/issues",
+        "source": "https://github.com/AndreyMashukov/http-client-php"
+    },
     "require": {
         "php": ">=8.3",
         "ext-curl": "*",
