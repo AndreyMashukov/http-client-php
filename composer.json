@@ -1,0 +1,52 @@
+{
+    "name": "amashukov/http-client-php",
+    "description": "PSR-18 HTTP client backed by ext-curl, with a middleware pipeline (retry on selected status codes, header injection). PSR-7 / PSR-17 message + factory interfaces; bring your own PSR-7 implementation (nyholm/psr7, guzzlehttp/psr7, slim/psr7, etc.).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["psr-18", "psr-7", "psr-17", "http-client", "curl", "middleware"],
+    "authors": [
+        {
+            "name": "Andrei Mashukov",
+            "email": "a.mashukoff@gmail.com",
+            "homepage": "https://github.com/AndreyMashukov"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "ext-curl": "*",
+        "psr/http-client": "^1.0",
+        "psr/http-message": "^2.0",
+        "psr/http-factory": "^1.1"
+    },
+    "provide": {
+        "psr/http-client-implementation": "1.0"
+    },
+    "require-dev": {
+        "amashukov/rector-php-rules": "^0.1.0",
+        "friendsofphp/php-cs-fixer": "^3.50",
+        "nyholm/psr7": "^1.8",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.0",
+        "rector/rector": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amashukov\\HttpClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amashukov\\HttpClient\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "stan": "phpstan analyse --memory-limit=512M",
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix",
+        "rector": "rector process --dry-run"
+    }
+}
